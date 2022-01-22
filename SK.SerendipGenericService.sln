@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SK.SerendipGenericServise.I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SK.SerendipGenericServise.KAracKaraApi", "SK.SerendipGenericServise.KAracKaraApi\SK.SerendipGenericServise.KAracKaraApi.csproj", "{AC8AD372-D8FF-4140-A7F3-569AE1FECF6F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SK.SerendipGenericService.KKuryeLocationApi", "SK.SerendipGenericService.KKuryeLocationApi\SK.SerendipGenericService.KKuryeLocationApi.csproj", "{8DEFD259-B2A1-4DD9-BC21-1FA98336FFEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SK.SerendipGenericServise.KCariApi", "SK.SerendipGenericServise.KCariApi\SK.SerendipGenericServise.KCariApi.csproj", "{A7596A75-90E5-43D5-BBE4-8AFB0EDF9FEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +69,14 @@ Global
 		{AC8AD372-D8FF-4140-A7F3-569AE1FECF6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC8AD372-D8FF-4140-A7F3-569AE1FECF6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC8AD372-D8FF-4140-A7F3-569AE1FECF6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DEFD259-B2A1-4DD9-BC21-1FA98336FFEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DEFD259-B2A1-4DD9-BC21-1FA98336FFEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DEFD259-B2A1-4DD9-BC21-1FA98336FFEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DEFD259-B2A1-4DD9-BC21-1FA98336FFEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7596A75-90E5-43D5-BBE4-8AFB0EDF9FEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7596A75-90E5-43D5-BBE4-8AFB0EDF9FEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7596A75-90E5-43D5-BBE4-8AFB0EDF9FEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7596A75-90E5-43D5-BBE4-8AFB0EDF9FEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
