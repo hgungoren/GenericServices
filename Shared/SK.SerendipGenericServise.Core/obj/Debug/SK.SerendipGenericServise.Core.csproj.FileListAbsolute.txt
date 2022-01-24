@@ -25,3 +25,10 @@ C:\Users\sakir.kilic.SURATKARGO\Desktop\SKSerendipService\SK.SerendipGenericServ
 C:\Users\sakir.kilic.SURATKARGO\Desktop\SKSerendipService\SK.SerendipGenericServise\SK.SerendipGenericServise\Shared\SK.SerendipGenericServise.Core\obj\Debug\SK.SerendipGenericServise.Core.csproj.CoreCompileInputs.cache
 C:\Users\sakir.kilic.SURATKARGO\Desktop\SKSerendipService\SK.SerendipGenericServise\SK.SerendipGenericServise\Shared\SK.SerendipGenericServise.Core\obj\Debug\SK.SerendipGenericServise.Core.exe
 C:\Users\sakir.kilic.SURATKARGO\Desktop\SKSerendipService\SK.SerendipGenericServise\SK.SerendipGenericServise\Shared\SK.SerendipGenericServise.Core\obj\Debug\SK.SerendipGenericServise.Core.pdb
+C:\Users\huseyin.gungoren\Desktop\abc\SK.SerendipGenericService\Shared\SK.SerendipGenericServise.Core\bin\Debug\SK.SerendipGenericServise.Core.exe.config
+C:\Users\huseyin.gungoren\Desktop\abc\SK.SerendipGenericService\Shared\SK.SerendipGenericServise.Core\bin\Debug\SK.SerendipGenericServise.Core.exe
+C:\Users\huseyin.gungoren\Desktop\abc\SK.SerendipGenericService\Shared\SK.SerendipGenericServise.Core\bin\Debug\SK.SerendipGenericServise.Core.pdb
+C:\Users\huseyin.gungoren\Desktop\abc\SK.SerendipGenericService\Shared\SK.SerendipGenericServise.Core\obj\Debug\SK.SerendipGenericServise.Core.csproj.AssemblyReference.cache
+C:\Users\huseyin.gungoren\Desktop\abc\SK.SerendipGenericService\Shared\SK.SerendipGenericServise.Core\obj\Debug\SK.SerendipGenericServise.Core.csproj.CoreCompileInputs.cache
+C:\Users\huseyin.gungoren\Desktop\abc\SK.SerendipGenericService\Shared\SK.SerendipGenericServise.Core\obj\Debug\SK.SerendipGenericServise.Core.exe
+C:\Users\huseyin.gungoren\Desktop\abc\SK.SerendipGenericService\Shared\SK.SerendipGenericServise.Core\obj\Debug\SK.SerendipGenericServise.Core.pdb

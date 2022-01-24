@@ -28,8 +28,7 @@ namespace SK.SerendipGenericService.KKargoHareketApi.Controllers.v1
         public IHttpActionResult GetKuryeObjId(long id)
         {
             var result = _kKargoHareketAppService.GetKuryeObjId(id);
-            return Json(result);
-
+            return Json(result); 
         }
     }
 }
