@@ -1,36 +1,16 @@
 {
   "Version": 1,
   "ProjectMap": {
-    "89913ed4-2154-4902-b346-e9da68d9d77f": {
-      "ProjectGuid": "89913ed4-2154-4902-b346-e9da68d9d77f",
-      "DisplayName": "SK.SerendipGenericServise.KPersonelApi",
+    "a7596a75-90e5-43d5-bbe4-8afb0edf9fee": {
+      "ProjectGuid": "a7596a75-90e5-43d5-bbe4-8afb0edf9fee",
+      "DisplayName": "SK.SerendipGenericServise.KCariApi",
       "ColorIndex": 0
     },
-    "c39815ba-b17d-4e46-8c08-b2d5e7adfeb5": {
-      "ProjectGuid": "c39815ba-b17d-4e46-8c08-b2d5e7adfeb5",
-      "DisplayName": "SK.SerendipGenericServise.KKargoApi",
+    "f4fe822c-0024-49c7-bba3-f114fecd4a61": {
+      "ProjectGuid": "f4fe822c-0024-49c7-bba3-f114fecd4a61",
+      "DisplayName": "SK.SerendipGenericService.KKargoHareketApi",
       "ColorIndex": 1
-    },
-    "b82d9328-00b9-433e-8e8d-0495ad9322f6": {
-      "ProjectGuid": "b82d9328-00b9-433e-8e8d-0495ad9322f6",
-      "DisplayName": "SK.SerendipGenericServise.Core",
-      "ColorIndex": 2
-    },
-    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
-      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
-      "DisplayName": "Miscellaneous Files",
-      "ColorIndex": -1
-    },
-    "e0a5667c-8e02-4ba4-9a1a-932cfcd84eb1": {
-      "ProjectGuid": "e0a5667c-8e02-4ba4-9a1a-932cfcd84eb1",
-      "DisplayName": "SK.SerendipGenericService.KSubeApi",
-      "ColorIndex": 3
-    },
-    "37ef2761-9a42-4167-b331-dbc980742ae3": {
-      "ProjectGuid": "37ef2761-9a42-4167-b331-dbc980742ae3",
-      "DisplayName": "SK.SerendipGenericServise.KGeoLocationApi",
-      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 5
+  "NextColorIndex": 2
 }
