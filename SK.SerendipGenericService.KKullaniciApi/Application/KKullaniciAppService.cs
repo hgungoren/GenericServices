@@ -2,10 +2,6 @@
 using Serendip.Entity;
 using SK.SerendipGenericService.KKullaniciApi.Application.Dto;
 using SK.SerendipGenericService.KKullaniciApi.Application.ResponseDto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace SK.SerendipGenericService.KKullaniciApi.Application
 {

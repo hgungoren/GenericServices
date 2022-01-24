@@ -1,8 +1,9 @@
 ﻿using SK.SerendipGenericServise.Core.Enums;
+using Serendip.Entity;
 
 namespace SK.SerendipGenericService.KSubeApi.Application.ResponseDto
 {
-    public class KSubeReponseDto: Serendip.Entity.Entity
+    public class KSubeReponseDto: Entity
     {
         public string ObjId { get; set; }
         public string Adi { get; set; }

@@ -6,7 +6,6 @@ using SK.SerendipGenericServise.KPersonelApi.Application.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace SK.SerendipGenericService.KSubeApi.Application
 {
@@ -24,7 +23,14 @@ namespace SK.SerendipGenericService.KSubeApi.Application
 
         public List<long> GetBranchIds(long id)
         {
-            var result = Entity.FindAllBySql<KSubeDto>(@"select ObjId from KSube(nolock) where Aktif=1 and Faaliyettemi=1 and (KSube.ObjId=@prm0 or KSube.BagliOlduguSube_ObjId=@prm1)", new object[] { id, id });
+            var result = Entity.FindAllBySql<KSubeDto>(@"select ObjId
+from KSube (nolock)
+where Aktif = 1
+      and Faaliyettemi = 1
+      and (
+              KSube.ObjId = @prm0
+              or KSube.BagliOlduguSube_ObjId = @prm1
+          )", new object[] { id, id });
 
             return _mapper.Map<List<long>>(result);
         }
@@ -46,7 +52,13 @@ namespace SK.SerendipGenericService.KSubeApi.Application
                 int allcount = all.Count();
                 foreach (var branch in all)
                 {
-                    var k2 = Entity.FindAllBySql<KSubeDto>(@"select * from KSube(nolock) ks inner join KSube(nolock) kb on ks.BagliOlduguSube_ObjId=kb.ObjId where ks.Aktif=1 and ks.Faaliyettemi=1 and ks.BagliOlduguSube_ObjId=@prm0", new object[] { branch.ObjId });
+                    var k2 = Entity.FindAllBySql<KSubeDto>(@"select *
+from KSube (nolock) ks
+    inner join KSube (nolock) kb
+        on ks.BagliOlduguSube_ObjId = kb.ObjId
+where ks.Aktif = 1
+      and ks.Faaliyettemi = 1
+      and ks.BagliOlduguSube_ObjId = @prm0", new object[] { branch.ObjId });
                     int count = 0;
                     foreach (var item in k2)
                     {
@@ -74,13 +86,37 @@ namespace SK.SerendipGenericService.KSubeApi.Application
         {
             long bolgeId = long.Parse(id); 
 
-            var result = Entity.FindAllBySql<KSubeDto>(@"select s.Adi,s.Aktif,count(p.ObjId) PersonelSayisi,s.ObjId,s.Tipi,s.TipTur,s.BagliOlduguSube_ObjId from KSube(nolock) k inner join KSube(nolock) s on s.BagliOlduguSube_ObjId=k.ObjId inner join KPersonel(nolock) p on p.IsYeri_ObjId=s.ObjId where k.ObjId=@prm0 and p.Aktif=1 group by s.Adi,s.Aktif,s.ObjId,s.Tipi,s.TipTur,s.BagliOlduguSube_ObjId", new object[] { bolgeId });
+            var result = Entity.FindAllBySql<KSubeDto>(@"select s.Adi,
+       s.Aktif,
+       count(p.ObjId) PersonelSayisi,
+       s.ObjId,
+       s.Tipi,
+       s.TipTur,
+       s.BagliOlduguSube_ObjId
+from KSube (nolock) k
+    inner join KSube (nolock) s
+        on s.BagliOlduguSube_ObjId = k.ObjId
+    inner join KPersonel (nolock) p
+        on p.IsYeri_ObjId = s.ObjId
+where k.ObjId = @prm0
+      and p.Aktif = 1
+group by s.Adi,
+         s.Aktif,
+         s.ObjId,
+         s.Tipi,
+         s.TipTur,
+         s.BagliOlduguSube_ObjId", new object[] { bolgeId });
 
             List<KSubeDto> branchs = new List<KSubeDto>();
 
             foreach (var sube in result)
             { 
-                int count = Entity.FindAllBySql<KPersonelDto>(@"select * from KSube k inner join KPersonel p on p.IsYeri_ObjId=k.ObjId where k.ObjId=@prm0 and p.Aktif=1", new object[] { bolgeId }).Count();
+                int count = Entity.FindAllBySql<KPersonelDto>(@"select *
+from KSube k
+    inner join KPersonel p
+        on p.IsYeri_ObjId = k.ObjId
+where k.ObjId = @prm0
+      and p.Aktif = 1", new object[] { bolgeId }).Count();
                 KSubeDto subeDto = new KSubeDto();
                 subeDto.Adi = sube.Adi;
                 subeDto.Aktif = sube.Aktif;
@@ -98,7 +134,12 @@ namespace SK.SerendipGenericService.KSubeApi.Application
         public KSubeReponseDto GetReceiverBranchInfo(string takipNo)
         {  
 
-            var data = Entity.FindAllBySql<KSubeDto>(@"select top 1 ks.Adi from KSube ks inner join KKargo k on k.VarisSube_ObjId=ks.ObjId where k.TakipNo=@prm0", new object[] { takipNo });
+            var data = Entity.FindAllBySql<KSubeDto>(@"select top 1
+    ks.Adi
+from KSube ks
+    inner join KKargo k
+        on k.VarisSube_ObjId = ks.ObjId
+where k.TakipNo = @prm0", new object[] { takipNo });
 
             if (data != null)
             {
@@ -110,7 +151,12 @@ namespace SK.SerendipGenericService.KSubeApi.Application
 
         public KSubeReponseDto GetSenderBranchInfo(string takipNo)
         {
-            var data = Entity.FindAllBySql<KSubeDto>(@"select top 1 ks.Adi from KSube ks inner join KKargo k on k.AliciSube_ObjId=ks.ObjId where k.TakipNo=@prm0", new object[] { takipNo });
+            var data = Entity.FindAllBySql<KSubeDto>(@"select top 1
+    ks.Adi
+from KSube ks
+    inner join KKargo k
+        on k.AliciSube_ObjId = ks.ObjId
+where k.TakipNo = @prm0", new object[] { takipNo });
 
             if (data != null)
             {
@@ -131,7 +177,15 @@ namespace SK.SerendipGenericService.KSubeApi.Application
         {
             List<KSubeResponseListDamageDto> branches = new List<KSubeResponseListDamageDto>();
 
-            var data = Entity.FindAllBySql<KSubeResponseListDamageDto>(@"select * from KSube(nolock) where Aktif=1 and Faaliyettemi=1 and TipTur=1 and (Tipi=4 or Tipi=5)", new object[] { null });
+            var data = Entity.FindAllBySql<KSubeResponseListDamageDto>(@"select *
+from KSube (nolock)
+where Aktif = 1
+      and Faaliyettemi = 1
+      and TipTur = 1
+      and (
+              Tipi = 4
+              or Tipi = 5
+          )", new object[] { null });
             foreach (var item in data)
             {
                 KSubeResponseListDamageDto ks = new KSubeResponseListDamageDto();
@@ -146,7 +200,15 @@ namespace SK.SerendipGenericService.KSubeApi.Application
         {
             List<KSubeResponseListDamageDto> branches = new List<KSubeResponseListDamageDto>();
 
-            var data = Entity.FindAllBySql<KSubeResponseListDamageDto>(@"select * from KSube(nolock) where Aktif=1 and Faaliyettemi=1 and TipTur=1 and (Tipi=2 or Tipi=1)", new object[] { null });
+            var data = Entity.FindAllBySql<KSubeResponseListDamageDto>(@"select *
+from KSube (nolock)
+where Aktif = 1
+      and Faaliyettemi = 1
+      and TipTur = 1
+      and (
+              Tipi = 2
+              or Tipi = 1
+          )", new object[] { null });
             foreach (var item in data)
             {
                 KSubeResponseListDamageDto ks = new KSubeResponseListDamageDto();

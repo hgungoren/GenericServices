@@ -1,6 +1,5 @@
 ﻿using SK.SerendipGenericService.KSubeApi.Application;
 using System.Web.Http;
-using System.Web.Mvc;
 
 namespace SK.SerendipGenericService.KSubeApi.Controllers.v1
 {
@@ -13,43 +12,43 @@ namespace SK.SerendipGenericService.KSubeApi.Controllers.v1
             _kSubeAppService = new KSubeAppService();
         } 
 
-        [System.Web.Http.HttpGet]
-        [System.Web.Http.Route("KBolge")]
+        [HttpGet]
+        [Route("KBolge")]
         public IHttpActionResult GetKBolge()
         {
             var data = _kSubeAppService.GetKBolgeAll();
             return Json(data);
         }
-        [System.Web.Http.HttpGet]
-        [System.Web.Http.Route("KSube")]
+        [HttpGet]
+        [Route("KSube")]
         public IHttpActionResult GetKSube(string id)
         {
             var data = _kSubeAppService.GetKSube(id);
             return Json(data);
         }
-        [System.Web.Http.HttpGet]
-        [System.Web.Http.Route("GetById/{id}")]
+        [HttpGet]
+        [Route("GetById/{id}")]
         public IHttpActionResult GetById(string id)
         {
             var data = _kSubeAppService.GetKSubeById(id);
             return Json(data);
         }
-        [System.Web.Http.HttpGet]
-        [System.Web.Http.Route("GetBranchIds/{id}")]
+        [HttpGet]
+        [Route("GetBranchIds/{id}")]
         public IHttpActionResult GetBranchIds(long id)
         {
             var data = _kSubeAppService.GetBranchIds(id);
             return Json(data);
         }
-        [System.Web.Http.HttpGet]
-        [System.Web.Http.Route("GetByCode/{code}")]
+        [HttpGet]
+        [Route("GetByCode/{code}")]
         public IHttpActionResult GetByCode(string code)
         {
             var data = _kSubeAppService.GetByCode(code);
             return Json(data);
         }
-        [System.Web.Http.HttpGet]
-        [System.Web.Http.Route("GetSenderBranchInfo/{takipNo}")]
+        [HttpGet]
+        [Route("GetSenderBranchInfo/{takipNo}")]
         public IHttpActionResult GetSenderBranchInfo(string takipNo)
         { 
             var data = _kSubeAppService.GetSenderBranchInfo(takipNo);
@@ -59,8 +58,8 @@ namespace SK.SerendipGenericService.KSubeApi.Controllers.v1
             } 
             return NotFound();
         }
-        [System.Web.Http.HttpGet]
-        [System.Web.Http.Route("GetReceiverBranchInfo/{takipNo}")]
+        [HttpGet]
+        [Route("GetReceiverBranchInfo/{takipNo}")]
         public IHttpActionResult GetReceiverBranchInfo(string takipNo)
         {
             var data = _kSubeAppService.GetReceiverBranchInfo(takipNo);
@@ -71,15 +70,15 @@ namespace SK.SerendipGenericService.KSubeApi.Controllers.v1
             return NotFound();
 
         }
-        [System.Web.Http.HttpGet]
-        [System.Web.Http.Route("GetKSubeListDamageAll")]
+        [HttpGet]
+        [Route("GetKSubeListDamageAll")]
         public IHttpActionResult GetKSubeListDamage()
         {
             var data = _kSubeAppService.GetKSubeListDamage();
             return Ok(data);
         }
-        [System.Web.Http.HttpGet]
-        [System.Web.Http.Route("GetKBolgeListDamageAll")]
+        [HttpGet]
+        [Route("GetKBolgeListDamageAll")]
         public IHttpActionResult GetKBolgeListDamage()
         {
             var data = _kSubeAppService.GetKBolgeListDamage();

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Serendip.Entity;
 
 namespace SK.SerendipGenericService.KAdresApi.Application.Dto
 {
-    public class KAdresDto
+    public class KAdresDto : Entity
     {
         public string ToText { get; set; }
     }
