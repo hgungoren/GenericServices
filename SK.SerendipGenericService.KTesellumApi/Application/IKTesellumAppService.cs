@@ -5,6 +5,6 @@ namespace SK.SerendipGenericService.KTesellumApi.Application
 {
     public interface IKTesellumAppService
     {
-        IEnumerable<KTesellumResponseDto> GetAsync(string takipNo);
+        IEnumerable<KTesellumResponseDto> Get(string takipNo);
     }
 }

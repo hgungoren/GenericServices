@@ -22,7 +22,7 @@ namespace SK.SerendipGenericService.KTesellumApi.Application
 
 
 
-        public IEnumerable<KTesellumResponseDto> GetAsync(string takipNo)
+        public IEnumerable<KTesellumResponseDto> Get(string takipNo)
 
         {
             var result = Serendip.Entity.Entity.ActiveRecord.ExecuteTable(@"select * from KTesellum where TEFKargoTakipNo = @prm0", new object[] { takipNo });

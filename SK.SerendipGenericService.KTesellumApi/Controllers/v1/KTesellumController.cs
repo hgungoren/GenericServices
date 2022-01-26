@@ -11,9 +11,9 @@ namespace SK.SerendipGenericService.KTesellumApi.Controllers.v1
             _kTesellumAppService = new KTesellumAppService();
         }
 
-        public IHttpActionResult GetAsync(string takipNo)
+        public IHttpActionResult Get(string takipNo)
         {
-            var result = _kTesellumAppService.GetAsync(takipNo);
+            var result = _kTesellumAppService.Get(takipNo);
             return Json(result);
 
         }
